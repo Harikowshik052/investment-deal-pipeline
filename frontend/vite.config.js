@@ -12,7 +12,13 @@ export default defineConfig({
     alias: {
       '@': resolve(__dirname, './src'),
     },
-    extensions: ['.js', '.jsx', '.json'],
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+    },
   },
   server: {
     port: 5173,
