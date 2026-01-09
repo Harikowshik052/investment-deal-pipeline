@@ -3,7 +3,6 @@ import { useNavigate, Link } from 'react-router-dom'
 import { useMutation } from '@tanstack/react-query'
 import { authAPI } from '../lib/api'
 import { useAuthStore } from '../stores/authStore'
-import { USER_ROLES } from '../lib/constants'
 import { User, Mail, Lock, AlertCircle } from 'lucide-react'
 
 export default function Signup() {
