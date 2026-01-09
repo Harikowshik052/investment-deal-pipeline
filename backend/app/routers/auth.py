@@ -32,7 +32,7 @@ def signup(signup_data: SignupRequest, db: Session = Depends(get_db)):
         email=signup_data.email,
         hashed_password=hashed_password,
         full_name=signup_data.full_name,
-        role=None  # No global role - using board roles only
+        role=UserRole.ANALYST  # Default role for new signups
     )
     
     db.add(new_user)
